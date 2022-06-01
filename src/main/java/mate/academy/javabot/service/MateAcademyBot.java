@@ -17,6 +17,7 @@ import java.util.List;
 
 @Component
 public class MateAcademyBot extends TelegramLongPollingBot {
+    int count = 0;
     @Override
     public String getBotUsername() {
         return "exclusive_by_yevhenii_bot";
@@ -34,7 +35,8 @@ public class MateAcademyBot extends TelegramLongPollingBot {
         Message message = update.getMessage();
 
         if (!StringUtils.isEmpty(message.getText())) {
-            System.out.println(message.getText());
+            count++;
+            System.out.println("Саша, не смотря на то, что ты отправил уже " + count + " сообщений, ты меня не сломаешь");
         }
         SendMessage sendMessage = new SendMessage();
 
