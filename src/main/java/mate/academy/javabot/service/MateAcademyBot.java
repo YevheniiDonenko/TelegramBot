@@ -4,7 +4,9 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
+import org.telegram.telegrambots.meta.api.methods.send.SendSticker;
 import org.telegram.telegrambots.meta.api.objects.CallbackQuery;
+import org.telegram.telegrambots.meta.api.objects.InputFile;
 import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.api.objects.commands.BotCommand;
@@ -22,6 +24,7 @@ public class MateAcademyBot extends TelegramLongPollingBot {
     public String getBotUsername() {
         return "exclusive_by_yevhenii_bot";
     }
+
 
     @Override
     public String getBotToken() {
@@ -47,8 +50,6 @@ public class MateAcademyBot extends TelegramLongPollingBot {
 //                + "', but now i cant to do something with it");
         sendMessage.setText("Саша, не смотря на то, что ты отправил уже " + count + " сообщений, ты меня не сломаешь");
         sendMessage.setChatId(String.valueOf(message.getChatId()));
-
-
 
         if (message.getText().equals("/start")) {
             String text = "Welcome to the Exclusive bot.";
@@ -95,7 +96,9 @@ public class MateAcademyBot extends TelegramLongPollingBot {
         }
 
         try {
-            execute(sendMessage);
+            for (int = 0; i < 20; i++) {
+                execute(sendMessage);
+            }
         } catch (TelegramApiException e) {
             e.printStackTrace();
         }
