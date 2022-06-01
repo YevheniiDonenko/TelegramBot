@@ -68,7 +68,7 @@ public class MateAcademyBot extends TelegramLongPollingBot {
             StringBuilder builder = new StringBuilder();
 
             builder.append("Breakfast menu").append(System.lineSeparator());
-            builder.append("1. Coke").append(System.lineSeparator());
+            builder.append("1. КОЛА").append(System.lineSeparator());
             builder.append("2. Tea").append(System.lineSeparator());
             builder.append("3. Cake").append(System.lineSeparator());
 
