@@ -36,16 +36,18 @@ public class MateAcademyBot extends TelegramLongPollingBot {
 
         if (!StringUtils.isEmpty(message.getText())) {
             count++;
-            System.out.println("Саша, не смотря на то, что ты отправил уже " + count + " сообщений, ты меня не сломаешь");
+            System.out.println(message.getText());
         }
         SendMessage sendMessage = new SendMessage();
 
 
 
-        sendMessage.setText("Hello user. I received your message '"
-                + message.getText()
-                + "', but now i cant to do something with it");
+//        sendMessage.setText("Hello user. I received your message '"
+//                + message.getText()
+//                + "', but now i cant to do something with it");
+        sendMessage.setText("Саша, не смотря на то, что ты отправил уже " + count + " сообщений, ты меня не сломаешь");
         sendMessage.setChatId(String.valueOf(message.getChatId()));
+
 
 
         if (message.getText().equals("/start")) {
