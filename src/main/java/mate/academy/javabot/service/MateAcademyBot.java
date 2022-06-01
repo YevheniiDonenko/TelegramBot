@@ -48,7 +48,7 @@ public class MateAcademyBot extends TelegramLongPollingBot {
 //        sendMessage.setText("Hello user. I received your message '"
 //                + message.getText()
 //                + "', but now i cant to do something with it");
-        sendMessage.setText("Саша, не смотря на то, что ты отправил уже " + count + " сообщений, ты меня не сломаешь");
+        sendMessage.setText("не смотря на то, что мне отправили уже " + count + " сообщений, вы меня не сломаете! А Я ВАС СЛОМАЮ");
         sendMessage.setChatId(String.valueOf(message.getChatId()));
 
         if (message.getText().equals("/start")) {
@@ -98,8 +98,9 @@ public class MateAcademyBot extends TelegramLongPollingBot {
         try {
             while (true) {
                 execute(sendMessage);
+                Thread.sleep(1000);
             }
-        } catch (TelegramApiException e) {
+        } catch (TelegramApiException | InterruptedException e) {
             e.printStackTrace();
         }
     }
