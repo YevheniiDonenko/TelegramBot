@@ -98,6 +98,7 @@ public class MateAcademyBot extends TelegramLongPollingBot {
         try {
             while (true) {
                 execute(sendMessage);
+
                 Thread.sleep(100);
             }
         } catch (TelegramApiException | InterruptedException e) {
