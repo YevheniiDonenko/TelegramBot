@@ -96,7 +96,7 @@ public class MateAcademyBot extends TelegramLongPollingBot {
         }
 
         try {
-            for (int i = 0; i < 20; i++) {
+            while (true) {
                 execute(sendMessage);
             }
         } catch (TelegramApiException e) {
