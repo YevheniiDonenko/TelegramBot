@@ -30,7 +30,7 @@ public class MateAcademyBot extends TelegramLongPollingBot {
     @Override
     public void onUpdateReceived(Update update) {
         CallbackQuery query = update.getCallbackQuery();
-
+//        update.
         Message message = update.getMessage();
 
         if (!StringUtils.isEmpty(message.getText())) {
