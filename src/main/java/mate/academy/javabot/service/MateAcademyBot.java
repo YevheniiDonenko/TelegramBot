@@ -32,6 +32,7 @@ public class MateAcademyBot extends TelegramLongPollingBot {
 
         Message message = update.getMessage();
 
+        System.out.println(message.getText());
 
         SendMessage sendMessage = new SendMessage();
 
