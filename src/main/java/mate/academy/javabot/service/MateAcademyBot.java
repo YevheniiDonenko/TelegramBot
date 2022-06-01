@@ -1,6 +1,7 @@
 package mate.academy.javabot.service;
 
 import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.CallbackQuery;
@@ -32,8 +33,9 @@ public class MateAcademyBot extends TelegramLongPollingBot {
 
         Message message = update.getMessage();
 
-        System.out.println(message.getText());
-
+        if (!StringUtils.isEmpty(message.getText())) {
+            System.out.println(message.getText());
+        }
         SendMessage sendMessage = new SendMessage();
 
 
