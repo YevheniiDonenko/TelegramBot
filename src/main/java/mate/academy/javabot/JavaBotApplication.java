@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.PropertySource;
 
 @SpringBootApplication
-@PropertySource("classpath:application.properties")
+//@PropertySource("classpath:application.properties")
 public class JavaBotApplication {
 
 	public static void main(String[] args) {
